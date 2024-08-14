@@ -1,9 +1,9 @@
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 if os.path.exists("env.py"):
     import env
 
@@ -20,8 +20,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "DEVELOPMENT" in os.environ
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    "planandplate-production.up.railway.app",
+    "https://planandplate-production.up.railway.app",
+]
+CSRF_TRUSTED_ORIGINS = ["https://planandplate-production.up.railway.app"]
 
 # Application definition
 
@@ -124,7 +127,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "railway",
         "USER": "postgres",
-        "PASSWORD": os.environ.get("DB_PASSWORD_YO"),
+        # "PASSWORD": os.environ.get("DB_PASSWORD_YO"),
+        "PASSWORD": os.environ.get["DB_PASSWORD_YO"],
         "HOST": "monorail.proxy.rlwy.net",
         "PORT": "41285",
     }
