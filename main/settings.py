@@ -1,9 +1,9 @@
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 if os.path.exists("env.py"):
     import env
 
@@ -130,7 +130,7 @@ DATABASES = {
         "PASSWORD": os.environ.get("DB_PASSWORD_YO"),
         # "PASSWORD": os.environ.get["DB_PASSWORD_YO"],
         "HOST": "monorail.proxy.rlwy.net",
-        "PORT": "41285",
+        "PORT": "8080",
     }
 }
 
