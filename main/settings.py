@@ -1,9 +1,9 @@
 import os
 from pathlib import Path
 
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 if os.path.exists("env.py"):
     import env
 
