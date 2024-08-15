@@ -130,7 +130,7 @@ DATABASES = {
         "PASSWORD": os.environ.get("DB_PASSWORD_YO"),
         # "PASSWORD": os.environ.get["DB_PASSWORD_YO"],
         "HOST": "monorail.proxy.rlwy.net",
-        "PORT": "8080",
+        "PORT": "41285",
     }
 }
 
